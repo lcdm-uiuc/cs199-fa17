@@ -26,7 +26,7 @@ By the end of the course, we wish students to know:
 Breakdown
 
 - Attendance: 10%
-- Labs: 60%
+- MPs: 60%
 - Final Project: 30%
 
 Cutoffs
@@ -35,14 +35,14 @@ Cutoffs
 - 70% C-
 - 60% D-
 
-## Lab Policy
-Labs make up the majority of the student work for CS199. As such, it is important that students stay on top of the lab work. We suggest that students start labs early, and go to office hours if feel like they need help.
+## MP Policy
+MPs make up the majority of the student work for CS199. As such, it is important that students stay on top of the MP. We suggest that students start MPs early, and go to office hours if they feel like they need help.
 
-- All labs will be released after lectures on Thursdays.
-- All labs will be due on the following Wednesday at 11:59pm.
-- No late labs will be accepted, unless a valid excuse is presented to the course staff.
+- All MPs will be released after lectures on Thursdays.
+- All MPs will be due on the following Wednesday at 11:59pm.
+- No late MPs will be accepted, unless a valid excuse is presented to the course staff.
 
-**Note:** Many of the lab assignments will be run on the CS199 Nebula cluster. We do not guarantee 100% uptime of this cluster. Additionally, we notice that many students try to complete assignments right before the deadline, and this can lead to severely decreased cluster performance.
+**Note:** Many of the MPs will be run on the CS199 Nebula cluster. We do not guarantee 100% uptime of this cluster. Additionally, we notice that many students try to complete assignments right before the deadline, and this can lead to severely decreased cluster performance.
 Course staff also reserves the right to monitor and manage student submitted jobs on the cluster. If your code takes too much time to execute, or too much computing resources, course staff may terminate these jobs
 
 ## Office Hours
@@ -50,7 +50,7 @@ Course staff will host office hours throughtout the week to help students with c
 
 ## Academic Integrity
 The standard academic integrity policy applies here. If you believe that the solution to the assignment that you have written does not reflect how well you know the concepts being assessed, that is considered cheating. <a href="https://wiki.illinois.edu//wiki/display/undergradProg/Honor+Code">The academic policy</a> can be found here.</p>
-In addition to the standard academic integrity policy, we have an additional policy that if you leave labs in “plain view” (public on github, pastebin, your blog), we reserve the right to reduce your final letter grade in the course once per instance, even after you are done taking the course. This means that if you received a A- in the course and you posted 2 assignments online, your final grade will be a C-.
+In addition to the standard academic integrity policy, we have an additional policy that if you leave the MP in “plain view” (public on github, pastebin, your blog), we reserve the right to reduce your final letter grade in the course once per instance, even after you are done taking the course. This means that if you received a A- in the course and you posted 2 assignments online, your final grade will be a C-.
 Just remember, we consider cheating a failure on our part. If you are ever in a situation where you are forced to cheat, that means that we have not done our jobs as instructors to give you adequate resources to work through the issues that you have. If it anytime you feel this, please shoot us an email and hopefully we can find an acceptable solution.
 
 ## Absences
