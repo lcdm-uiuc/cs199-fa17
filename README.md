@@ -56,3 +56,6 @@ Just remember, we consider cheating a failure on our part. If you are ever in a 
 ## Absences
 If you have an emergency or unplanned absence you can talk to the course staff and we will deal with the absence.
 If you are sick, or have another similar urgent situation you must get approval from the emergency dean to get an excused absence. Otherwise, absences will not be accepted.
+
+## Attribution
+Lecture slides adapted from course materials created by previous CS199ACC instructor, Quinn Jarrell.
