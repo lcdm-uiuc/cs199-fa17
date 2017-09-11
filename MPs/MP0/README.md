@@ -28,9 +28,9 @@ In this MP, you will create a Dockerfile that has the following properties:
 1. Inherits from the Ubuntu public image.
 2. Implements labels for a maintainer and a class.
 3. Installs python3.
-4. Creates a few environment variables.
+4. Creates environment variables.
 5. Writes to a file in the container
-6. Sets the current user to root.
+6. Sets the current user to CS199.
 7. Runs bash whenever the container is run.
 
 For information on building a Dockerfile, look at the [docs](https://docs.docker.com/engine/reference/builder/).
