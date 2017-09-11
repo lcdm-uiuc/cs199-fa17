@@ -74,23 +74,23 @@ A-B - D-E
 Read this as: A is friends with B, B is friends with A, C and D, and so on. Our desired output is as follows:
 
 ```
+(A,C): [B]
+(A,D): [B]
 (B,C): [D]
 (B,D): [C]
+(B,E): [D]
 (C,D): [B]
+(C,E): [D]
 ```
-Read this as: B and C have D in common as a friend, B and D have C in common as a friend, and C and D have B in common as a friend. None of the other relationships have common friends.
 
-Your mapper stage should take each line of the friend graph and produce a list of relationships:
+Read this as: A and C have B in common as a friend, A and D have B in common as a friend, and B and C have D in common as a friend, and so on. None of the other relationships have common friends.
+(For example, A and E have no common friends)
 
-`A|B` -> `(A,B): A, B` 
+Note that each list of common friends should only be outputted once. (i.e. There should not be entries for `(A, C)` and `(C, A)`)
 
-`B|A, C, D` -> `(B,A): A, C, D`, `(B,C): A, C, D`, `(B,D): A, C, D`
-
-`C|B, D` -> `(C,B): B, D`, `(C, D): B, D`
-
-*et cetera*
-
-The reducer phase should take all of these relationships and output common friends for each pair. (Hint: Lookup set intersection)
+#### Suggestions:
+Your mapper stage should take each line of the friend graph and produce a multiple key/value pairs keyed with a relationship, with value being immediately known common friends.
+The reducer phase should take all of these relationships and output common friends for each pair. (Hint: Lookup set union)
 
 **Note:** This problem is a bit challenging. Try your best to figure it out before asking for help. :)
 
