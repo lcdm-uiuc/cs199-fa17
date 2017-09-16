@@ -208,12 +208,6 @@ cd /path/to/mp2
 
 ## Python Hadoop Streaming
 
-**IMPORTANT:** Before doing the following activities, run the following command to setup the Hadoop environment correctly. If you don't, it's likely that these instructions **will not work**.
-
-```
-source ~/hadoop.env
-```
-
 ### Introduction
 
 We are now ready to actually run our Python codes via Hadoop Streaming.
@@ -364,7 +358,8 @@ Hadoop, and this can also be verified by listing the contents of the
 hdfs dfs -ls wc
 ```
 
-### MP Assignments
+
+## MP Assignments
 
 In the preceding activity, we introduced Hadoop map/reduce by using a
 simple word count task. Now that you've seen how Hadoop mappers/reducers
@@ -373,6 +368,19 @@ work, write streaming map/reduce programs that accomplish the following tasks.
 
 **Note:** These programs should be able to run on large datasets in a decentralized fashion.
 You must keep this in consideration for your output to be correct.
+
+### Starting Your Streaming Jobs on the Cluster
+**IMPORTANT:** We've made it easier for you to run Hadoop Streaming jobs on the cluster.
+
+Run the following command to start your job:
+
+```
+mapreduce_streaming MAPPER REDUCER INPUT OUTPUT
+```
+
+`MAPPER` and `REDUCER` refer to your python files, `INPUT` is the HDFS path of the input data file(s), and `OUTPUT` is the directory to place the results of your job in.
+
+### Assignments
 
 #### Assignment 1: Finding Mutual Followers
 In `/shared/twitter_followers` on HDFS you will find a list of Twitter follower relationships.
@@ -419,7 +427,7 @@ Output your results in the following format: (i.e. space-separated)
 `ARTICLE_NAME LINK_COUNT`
 
 ### Suggested Workflow
-We also include the data files for this lab in our normal non-HDFS file system for your use. You can find them in `/mnt/datasetvolume`
+We also include the data files for this MP in our normal non-HDFS file system for your use. You can find them in `/mnt/datasetvolume`
 
 1. Write your map/reduce and test it with regular unix commands:
 
@@ -437,4 +445,4 @@ We also include the data files for this lab in our normal non-HDFS file system f
 
 ### Attribution
 
-Data for this lab is from the [Stanford Large Network Dataset Collection](https://snap.stanford.edu/data/index.html)
+Data for this MP is from the [Stanford Large Network Dataset Collection](https://snap.stanford.edu/data/index.html)
