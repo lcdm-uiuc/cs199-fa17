@@ -426,6 +426,35 @@ Do not count initial pages as having links to them.
 Output your results in the following format: (i.e. space-separated)
 `ARTICLE_NAME LINK_COUNT`
 
+### Accessing the Hadoop Job UI
+
+The Haddop Web UIs provide information about current and past Hadoop jobs. They're also useful in debugging failed jobs.
+
+Because of the way our networking is setup, you will need to use SSH or PuTTY to access these web interfaces.
+
+#### Mac / Linux Users
+
+Use the additional `-L` flag when you SSH to the cluster to tunnel ports to the destinations listed below.
+
+For example:
+
+`ssh <netid>@<cluster_ip> -i <ssh_key_file> -L 8000:192-168-100-17.local:19888 8001:192-168-100-17.local:8088`
+
+While this command is running, you can visit `localhost:8000` and `localhost:8001` in your browser to view the Hadoop web UIs.
+
+#### Windows Users
+
+Follow [this](http://realprogrammers.com/how_to/set_up_an_ssh_tunnel_with_putty.html) tutorial, and forward the destinations listed below.
+
+While PuTTY is active, you can visit `localhost:<PORT>` in your browser, where `<PORT>` is the Source Port you registered in PuTTY.
+
+#### Destinations
+
+(These are IP addresses accessible only within the cluster's network, which is why you need to use SSH or PuTTY to open a "tunnel" to view them)
+
+- `192-168-100-17.local:19888` - Hadoop JobHistory UI
+- `192-168-100-17.local:8088` - Cluset / Scheduler Metrics UI
+
 ### Suggested Workflow
 We also include the data files for this MP in our normal non-HDFS file system for your use. You can find them in `/mnt/datasetvolume`
 
