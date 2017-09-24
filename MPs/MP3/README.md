@@ -48,15 +48,31 @@ Please zip your source files for the following exercises and upload it to Moodle
 
 1. Write a map/reduce program to determine the the number of @-replies each user received. You may assume a tweet is an @-reply iff the tweet starts with an `@` character. You may also assume that each @-reply is only a reply to a single user. (i.e. `@foo @bar hello world` is an @-reply to `@foo`, but not `@bar`) Your output should be in this format (space-separated):
 
-	`<USER_HANDLE> <NUMBER_REPLIES_RECEIVED>`
+	```
+	<USER_HANDLE  (Including @ symbol)> <NUMBER_REPLIES_RECEIVED>
+
+	Example:
+	@jack 123
+	```
 
 2. Write a map/reduce program to determine the user with the most Tweets for every given day in the dataset. (If there's a tie, break the tie by sorting alphabetically on users' handles) Your output should be in this format (space-separated):
 
-	`<USER_HANDLE> <NUMBER_REPLIES_RECEIVED>`
+	```
+	<YYYY-MM-DD> <USER_HANDLE (Including @ symbol)>
+
+	Example:
+	2016-01-01 @jack
+	```
 
 3. Write a map/reduce program to determine the size of each users' vocabulary -- that is, determine the number of unique words used by each user accross all their Tweets. For the purposes of this problem, you should use the `.split()` method to split each Tweet into words. Your output should be in this format (space-separated):
 
-	`<USER_HANDLE> <NUMBER_OF_WORDS>`
+	```
+	<USER_HANDLE> <NUMBER_OF_WORDS>
+
+	Example:
+	@jack 123
+	```
+
 
 ### Don't lose your progress!
 
