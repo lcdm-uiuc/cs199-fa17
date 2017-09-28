@@ -95,7 +95,7 @@ We'll give more details about the data in these files as we continue with the MP
 *Hint:* JSON is parsed with `json.loads`
 
 ## MP Activities
-**MP 4 is due on Wednesday, October 4th, 2017 at 11:55PM.**
+**MP 4 is due on Wednesday, October 11th, 2017 at 11:55PM.**
 
 Please zip your source files for the following exercises and upload it to Moodle (learn.illinois.edu).
 
