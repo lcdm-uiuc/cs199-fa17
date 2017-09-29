@@ -76,6 +76,12 @@ This converts an rdd into a list of 100 items and then back into an RDD through 
 
 * [Programming Guide](http://spark.apache.org/docs/latest/programming-guide.html) -- This documentation by itself could be used to solve the entire MP. It is a great quick-start guide about Spark.
 
+### Spark Web Interface
+
+Similar to what we saw in the past weeks with the Hadoop Job web interface, Spark has a really useful web interface to view how jobs are executed. Accessing this web interface is similar to accessing the Hadoop interface. The destination for this web UI is `192-168-100-15.local:18081`.
+
+UNIX users can access this UI by appending `-L 8002:192-168-100-15.local:18081` to their ssh command, and then accessing `localhost:8002` in their local web browser. Windows users can use PuTTY in a similar fashion.
+
 
 ## The Dataset
 

@@ -438,7 +438,7 @@ Use the additional `-L` flag when you SSH to the cluster to tunnel ports to the 
 
 For example:
 
-`ssh <netid>@<cluster_ip> -i <ssh_key_file> -L 8000:192-168-100-17.local:19888 8001:192-168-100-17.local:8088`
+`ssh <netid>@<cluster_ip> -i <ssh_key_file> -L 8000:192-168-100-17.local:19888 -L 8001:192-168-100-17.local:8088`
 
 While this command is running, you can visit `localhost:8000` and `localhost:8001` in your browser to view the Hadoop web UIs.
 
