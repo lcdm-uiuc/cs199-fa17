@@ -181,9 +181,10 @@ For example, if we had a dataset of the following reviews:
 5 star: Everything was delicious!
 4 star: I liked the food, it was delicious.
 3 star: Meh, it was OK.
+2 star: The food really was pretty gross
 ```
 
-We see that `delicious` appears in `1` negative review, and `2` positive reviews. We have `1` total negative review, and `3` positive reviews. `P(positive) = 0.666` and `P(negative) = 0.5` (not realistic, of course). Our `probability_diff` for 'delicious' would therefore be `0.666 - 0.5 = 0.166`.
+We see that `delicious` appears in `2` positive reviews, and `1` negative review. We have `3` total positive reviews, and `2` total negative reviews. `P(positive) = (2/3) = 0.666` and `P(negative) = (1/2) = 0.5` (not realistic, of course). Our `probability_diff` for 'delicious' would therefore be `P(positive) - P(negative) = 0.666 - 0.5 = 0.166`.
 
 Output the **top 250** words that are most likely to be in positive reviews, but not in negative reviews (maximize `P(positive) - P(negative)`).
 
