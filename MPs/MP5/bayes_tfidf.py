@@ -24,7 +24,7 @@ def produce_tfidf(x):
     return tfidf
 
 # Load in reviews
-reviews = sc.textFile("hdfs:///shared/yelp/yelp_academic_dataset_review.json")
+reviews = sc.textFile("hdfs://dataproc-3ba9e17b-802e-4fec-8f2d-4e0d4167cadb-us-central1/Datasets/yelp/review.json")
 # Parse to json
 json_payloads = reviews.map(json.loads)
 # Tokenize and weed out bad data
