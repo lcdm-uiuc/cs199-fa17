@@ -64,11 +64,11 @@ Suppose we want to rank users by how many reviews they've written. We can do thi
 sqlContext.sql("SELECT user_id, COUNT(*) AS c"
                "FROM reviews "
                "GROUP BY user_id "
-               "SORT BY c DESC "
+               "ORDER BY c DESC "
                "LIMIT 10").collect()
 ```
 
-This query groups rows by the `user_id` column, and collapses those rows into tuples of `(user_id, COUNT(*))`, where `COUNT(*)` is the number of collapsed rows per grouping. This gives us the review count of each user. We then do `SORT BY c DESC` to show the top counts first, and `LIMIT 10` to only show the top 10 results.
+This query groups rows by the `user_id` column, and collapses those rows into tuples of `(user_id, COUNT(*))`, where `COUNT(*)` is the number of collapsed rows per grouping. This gives us the review count of each user. We then do `ORDER BY c DESC` to show the top counts first, and `LIMIT 10` to only show the top 10 results.
 
 ## MP Activities
 **MP 6 is due on Saturday, November 4th, 2017 at 11:55PM.**
@@ -103,8 +103,8 @@ For this problem, we'll use some more complicated parts of the SQL language. Oft
 Queries:
 
 1. How many reviews has the person who has written the most number of reviews written? What is that user's UserId?
-2. List the ProductIds of the products with the top 10 highest average review scores of products that have more than 10 reviews, sorted by product score, with ties broken by number of reviews.
-3. List the Ids of the reviews with the top 10 highest ratios between `HelpfulnessNumerator` and `HelpfulnessDenominator`, which have `HelpfulnessDenominator` more than 10, sorted by that ratio, with ties broken by `HelpfulnessDenominator`.
+2. List the ProductIds of the products with the top 10 highest average review scores of products that have more than 10 reviews, ordered by product score, with ties broken by number of reviews.
+3. List the Ids of the reviews with the top 10 highest ratios between `HelpfulnessNumerator` and `HelpfulnessDenominator`, which have `HelpfulnessDenominator` more than 10, ordered by that ratio, with ties broken by `HelpfulnessDenominator`.
 
 Notes: 
 
