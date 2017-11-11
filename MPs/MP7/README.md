@@ -110,7 +110,7 @@ First, we need to get a GCP project and credentials setup, so that we have a pla
 ### Problem 2 - Creating a Storage Bucket
 As we discussed in lecture, "Storage Buckets" are a useful way to store static resources. Often times, user data (like images) will be stored in storage buckets. These buckets are also sometimes used for large datasets, as they tend to scale elastically. You don't have to have a maximum size on your storage buckets, like you need to do with virtual disks. These Storage Buckets are usually backed by a service, so that people can access data inside these buckets from the wider Internet (if that's how you set them up). In GCP this service is called "Google Storage"; in AWS, this is called "S3" (Simple Storage Service). This problem will have you setup a storage bucket.
 
-1. Create a `google_storage_bucket` resource that is named `cs199-file-storage`.
+1. Create a `google_storage_bucket` resource that is named `cs199-file-storage-<YOUR_NETID>`.
 2. Make sure that the storage bucket located in the `US`.
 3. Enable `versioning` for this bucket.
 
