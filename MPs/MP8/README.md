@@ -26,8 +26,11 @@ slide_interval = 30 # How often the windowed function is executed
 
 # Parse tweets and return the text's word count
 def get_tweet_word_count(tweet_json):
-    data = json.loads(tweet_json)
-    return len(data['text'].split(' '))
+    try:
+        data = json.loads(tweet_json)
+        return len(data['text'].split(' '))
+    except:
+        return 0
 
 
 # Listen to the tweet stream
@@ -37,10 +40,10 @@ tweet_json_lines = ssc.socketTextStream("nebula-m", 8001)
 tweet_word_counts = tweet_json_lines.map(get_tweet_word_count)
 
 # Do a windowed aggregate sum on the word counts
-windowed_word_count = tweet_word_counts.reduceByWindow(lambda x, y: x + y, window_length, slide_interval)
+windowed_word_count = tweet_word_counts.reduceByWindow(lambda x, y: x + y, None, window_length, slide_interval)
 
 # Save output to Hadoop
-windowed_word_count.saveAsHadoopFiles('tweet_word_count')
+windowed_word_count.saveAsTextFiles('tweet_word_count')
 
 
 # Signal to spark streaming that we've setup our streaming application, and it's ready to be run
