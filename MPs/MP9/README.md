@@ -1,4 +1,4 @@
-# MP 8: Introduction to NoSQL
+# MP 9: Introduction to NoSQL
 
 ## Introduction
 
